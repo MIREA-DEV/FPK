@@ -1,0 +1,34 @@
+{
+    "application": {
+        "id": "",
+        "title": "FirmsApp12",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#FirmsApp12-Display",
+        "navigationComponentName": "ru.fpk.backend",
+        "intentSemanticObject": "FirmsApp12",
+        "intentAction": "Display",
+        "html5ApplicationName": "firmsapp12",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "9d560cf7-3ef3-44c0-9c36-a1f5d125e62d"
+        ],
+        "contentPackages": [
+            "b4029479-e2c9-429d-b3bf-7d2f4f331688"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Manufacturers",
+        "subtitle": "",
+        "searchKeywords": "Manufacturers,",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

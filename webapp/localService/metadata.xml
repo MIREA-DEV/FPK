@@ -1,0 +1,38 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ru.fpk.backend.odata.fpk_service">
+            <EntityType Name="CountriesType">
+                <Key>
+                    <PropertyRef Name="CountryID"/>
+                </Key>
+                <Property Name="CountryID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="CountryISOCode" Type="Edm.String" MaxLength="3"/>
+                <Property Name="CountryNameRU" Type="Edm.String" MaxLength="250"/>
+            </EntityType>
+            <EntityType Name="FirmsType">
+                <Key>
+                    <PropertyRef Name="FirmID"/>
+                </Key>
+                <Property Name="FirmID" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="2500"/>
+                <Property Name="Phone1" Type="Edm.String" MaxLength="100"/>
+                <Property Name="Phone2" Type="Edm.String" MaxLength="100"/>
+                <Property Name="Address" Type="Edm.String" MaxLength="1000"/>
+                <Property Name="Site" Type="Edm.String" MaxLength="1000"/>
+                <Property Name="Email" Type="Edm.String" MaxLength="100"/>
+                <Property Name="CountryID" Type="Edm.Int32"/>
+                <Property Name="Inn" Type="Edm.String" MaxLength="12"/>
+                <Property Name="Ogrn" Type="Edm.String" MaxLength="15"/>
+            </EntityType>
+            <EntityContainer Name="fpk_service" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Countries" EntityType="ru.fpk.backend.odata.fpk_service.CountriesType"/>
+                <EntitySet Name="Firms" EntityType="ru.fpk.backend.odata.fpk_service.FirmsType"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

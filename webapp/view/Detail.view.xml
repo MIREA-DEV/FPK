@@ -1,0 +1,41 @@
+<mvc:View controllerName="ru.fpk.backend.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:footerbar="sap.ushell.ui.footerbar">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<ObjectHeader id="objectHeader" title="{Name}"></ObjectHeader>
+			<IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
+				<items>
+					<IconTabFilter id="iconTabBarFilter1" icon="sap-icon://hint" tooltip="{i18n>detailIconTabBarInfo}">
+						<content>
+					    <Label text="{i18n>telephone1} : {Phone1}" width="100%" id="__label0"/>
+					    <Label text="{i18n>telephone2}: {Phone2}" width="100%" id="__label1"/>
+					    <Label text="{i18n>Address}: {Address}" width="100%" id="__label2"/>
+					    <Label text="{i18n>Site}: {Site}" width="100%" id="__label3"/>
+					    <Label text="{i18n>Email}:{Email}" width="100%" id="__label4"/>
+					    <Label text="{i18n>Country}:{CountryID}" width="100%" id="__label5"/>
+					    <Label text="{i18n>Inn}:{Inn}" width="100%" id="__label6"/>
+					    <Label text="{i18n>Ogrn}:{Ogrn}" width="100%" id="__label7"/>
+					</content>
+					</IconTabFilter>
+				  
+				</items>
+			</IconTabBar>
+		</semantic:content>
+		<semantic:editAction>
+			<semantic:EditAction id="edit" press="onEdit"/>
+		</semantic:editAction>
+		<semantic:customFooterContent>
+			<Button enabled="true" id="deleteButton" press="onDelete" text="Delete"/>
+		</semantic:customFooterContent>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+		<semantic:shareInJamAction>
+			<semantic:ShareInJamAction id="shareInJam" visible="{FLP>/isShareInJamActive}" press="onShareInJamPress"/>
+		</semantic:shareInJamAction>
+		<semantic:saveAsTileAction>
+			<footerbar:AddBookmarkButton id="shareTile" title="{detailView>/saveAsTileTitle}"/>
+		</semantic:saveAsTileAction>
+	</semantic:DetailPage>
+</mvc:View>
